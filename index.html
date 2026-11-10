@@ -1,64 +1,144 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Portfolio - 学習したことや制作した作品を紹介するポートフォリオサイトです。">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
+  <header class="site-header">
+    <a class="logo" href="#home">My Portfolio<span>.</span></a>
+    <nav aria-label="メインメニュー">
       <a href="#home">HOME</a>
-      <a href="#works">WORKS</a>
       <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#works">WORKS</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
-      <h2>こんにちは。<br>私のポートフォリオへようこそ。</h2>
-      <p>プログラミングやデザインについて学んでいます。</p>
-      <a href="#works" class="btn">作品を見る →</a>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+        <h1>Creating<br><span>Something New.</span></h1>
+        <p class="hero-description">
+          学びながら、考えながら、自分のアイデアを形にする。<br>
+          これまでの学習や制作の記録を紹介します。
+        </p>
+        <a class="button" href="#works">作品を見る <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="grid-mark"></div>
+        <span class="vertical-label">DESIGN / CODE / CREATE</span>
+      </div>
+      <a class="scroll-note" href="#about"><span></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <section id="works">
-      <h2>MY WORKS</h2>
-      <p>これまでに制作した作品</p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Webサイト制作</h3>
-          <p>HTMLとCSSを使ってWebサイトを制作しました。</p>
-        </div>
-
-        <div class="card">
-          <h3>C言語プログラム</h3>
-          <p>C言語を使った簡単なプログラムです。</p>
-        </div>
-
-        <div class="card">
-          <h3>その他の作品</h3>
-          <p>これから制作した作品を追加していきます。</p>
+    <section class="section about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>About <span>Me</span></h2>
+      </div>
+      <div class="about-content">
+        <div class="about-mark" aria-hidden="true">ME<span>.</span></div>
+        <div class="about-text">
+          <h3>はじめまして。</h3>
+          <p>
+            このサイトを見ていただき、ありがとうございます。
+            学校でプログラミングや情報技術について学んでいます。
+            HTMLやCSSを使ったWeb制作、C言語などに取り組みながら、
+            できることを少しずつ増やしています。
+          </p>
+          <p>
+            このポートフォリオでは、学習した内容や制作した作品を
+            まとめています。これからも新しいことに挑戦し、
+            制作物を追加していきます。
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <h2>ABOUT ME</h2>
-      <p>学校でプログラミングや情報技術について学んでいます。</p>
-      <h3>SKILLS</h3>
-      <p>HTML / CSS / C / Python</p>
+    <section class="section skills-section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">02 / SKILLS</p>
+        <h2>What I <span>Use</span></h2>
+        <p class="section-lead">学習・制作で使用している技術</p>
+      </div>
+      <div class="skill-list">
+        <article class="skill-card">
+          <span class="skill-number">01</span>
+          <div><h3>HTML</h3><p>Webページの構造を作成するために使用。</p></div>
+          <span class="skill-tag">WEB</span>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">02</span>
+          <div><h3>CSS</h3><p>色や配置、レイアウトなどのデザインを設定。</p></div>
+          <span class="skill-tag">DESIGN</span>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">03</span>
+          <div><h3>C</h3><p>基本的な文法や条件分岐、繰り返し処理を学習。</p></div>
+          <span class="skill-tag">PROGRAMMING</span>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">04</span>
+          <div><h3>Python</h3><p>プログラムの作成や基本的な処理を学習。</p></div>
+          <span class="skill-tag">PROGRAMMING</span>
+        </article>
+      </div>
+      <p class="small-note">※ 掲載内容はサンプルです。実際に学習した技術に合わせて変更してください。</p>
+    </section>
+
+    <section class="section works-section" id="works">
+      <div class="section-heading">
+        <p class="eyebrow">03 / WORKS</p>
+        <h2>Selected <span>Works</span></h2>
+        <p class="section-lead">これまでに取り組んだ作品・学習内容</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-visual visual-one"><span>01</span><b>WEB<br>DESIGN</b></div>
+          <div class="work-info">
+            <p class="work-category">HTML / CSS</p>
+            <h3>Webサイト制作</h3>
+            <p>HTMLとCSSを使い、ページの構成やデザインを考えてWebサイトを制作。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-visual visual-two"><span>02</span><b>CODE<br>PROJECT</b></div>
+          <div class="work-info">
+            <p class="work-category">C LANGUAGE</p>
+            <h3>C言語プログラム</h3>
+            <p>条件分岐や繰り返し処理などを利用して、基本的なプログラムを作成。</p>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-visual visual-three"><span>03</span><b>CREATIVE<br>IDEA</b></div>
+          <div class="work-info">
+            <p class="work-category">STUDY / DESIGN</p>
+            <h3>その他の制作</h3>
+            <p>授業や自主学習で取り組んだ内容を、今後ここに追加していく予定です。</p>
+          </div>
+        </article>
+      </div>
+      <p class="small-note">※ 作品名・説明はサンプルです。自分の作品に合わせて編集してください。</p>
+    </section>
+
+    <section class="contact-section">
+      <p class="eyebrow">THANK YOU FOR VISITING</p>
+      <h2>Thanks for<br><span>Watching.</span></h2>
+      <p>最後まで見ていただき、ありがとうございました。</p>
+      <a class="text-link" href="#home">BACK TO TOP ↑</a>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 My Portfolio</p>
+    <a class="logo" href="#home">My Portfolio<span>.</span></a>
+    <p>© 2026 My Portfolio. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
